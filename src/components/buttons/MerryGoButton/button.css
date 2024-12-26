@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.circle {
+  border: 5px outset ghostwhite;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: gray;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  position: absolute;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1;
+}
+
+.circle-container.active .circle {
+  opacity: 1;
+  transform: translate(0, 0) scale(0);
+}
+
+.circle-container .circle {
+  opacity: 0;
+  transform: translate(0, 0) scale(0); /* Start from the center and with no size */
+}
+
+.circle-container.active .circle:nth-child(1) {
+  transform: translate(
+    calc(50% + 160px * cos(315deg) - 40px),
+    calc(50% + 160px * sin(315deg) - 40px)
+  );
+  transition-delay: 0.1s;
+}
+
+.circle-container.active .circle:nth-child(2) {
+  transform: translate(
+    calc(50% + 150px * cos(0deg) - 40px),
+    calc(50% + 150px * sin(0deg) - 40px)
+  );
+  transition-delay: 0.2s;
+}
+
+.circle-container.active .circle:nth-child(3) {
+  transform: translate(
+    calc(50% + 160px * cos(45deg) - 40px),
+    calc(50% + 160px * sin(45deg) - 40px)
+  );
+  transition-delay: 0.3s;
+}
+
+.circle-container.active .circle:nth-child(4) {
+  transform: translate(
+    calc(50% + 150px * cos(90deg) - 40px),
+    calc(50% + 150px * sin(90deg) - 40px)
+  );
+  transition-delay: 0.4s;
+}
+
+.circle-container.active .circle:nth-child(5) {
+  transform: translate(
+    calc(50% + 160px * cos(135deg) - 40px),
+    calc(50% + 160px * sin(135deg) - 40px)
+  );
+  transition-delay: 0.5s;
+}
+
+.circle-container.active .circle:nth-child(6) {
+  transform: translate(
+    calc(50% + 160px * cos(180deg) - 40px),
+    calc(50% + 150px * sin(180deg) - 40px)
+  );
+  transition-delay: 0.6s;
+}
+
+.circle-container.active .circle:nth-child(7) {
+  transform: translate(
+    calc(50% + 160px * cos(225deg) - 40px),
+    calc(50% + 160px * sin(225deg) - 40px)
+  );
+  transition-delay: 0.7s;
+}
+
+.circle-container.active .circle:nth-child(8) {
+  transform: translate(
+    calc(50% + 150px * cos(270deg) - 40px),
+    calc(50% + 160px * sin(270deg) - 40px)
+  );
+  transition-delay: 0.8s;
+}
