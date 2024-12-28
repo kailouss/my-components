@@ -16,7 +16,7 @@ const MainHeader = () => {
   };
 
   return (
-    <div className="header absolute w-full h-20 bg-black border-b-white border-b-4 z-50">
+    <div className="header absolute w-screen h-20 bg-black border-b-white border-b-4 z-50">
       <div className="px-2 flex items-center h-full w-full select-none">
         {isMobileView() ? (
           <>
@@ -30,7 +30,7 @@ const MainHeader = () => {
               ☰
             </button>
             {isSidebarOpen && (
-              <div className="sidebar fixed top-0 left-0 h-full w-64 bg-gray-800 text-white shadow-lg z-50">
+              <div className="sidebar bg-opacity-80 fixed top-0 left-0 h-full w-64 bg-gray-800 text-white shadow-lg z-50">
                 <button
                   onClick={toggleSidebar}
                   className="absolute top-4 right-4 text-white hover:text-red-500"
